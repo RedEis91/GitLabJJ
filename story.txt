@@ -2,3 +2,5 @@ This is my paragraph. There are many others like it, but this is MY paragraph.
 
 
 It wa the best of times. It was the snowiest of times. It was October in Michigan.
+
+Jared and Jennifer are slaying the demons of Git as a successful team.

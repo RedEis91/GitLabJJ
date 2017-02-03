@@ -1,0 +1,148 @@
+Work with a partner on one of your computers. Download this text file and fill it out as
+you go. When you're done, switch to the other partner's computer and do it again.
+
+Use Terminal (on Mac) or Git Bash (on Windows) and your favorite text editor to complete
+the following. Wherever you see a >>>, record what command you used to complete that step.
+If you used multiple commands, write all the command you used.
+Wherever you see a ???, write a short answer to the question.
+
+1. Create a new folder
+>>> mkdir lab-git
+
+2. Make that folder into a local Git repository
+>>> git init
+
+3. Add a new empty file called story.txt
+>>> touch story.txt
+
+4. Open that file in a text editor.
+>>> open story.txt
+
+5. Add an opening paragraph to story.txt. Save it. The file should be at least several
+lines long.
+
+6. Create another file called authors.txt. Add your names to it and save it.
+
+7. Commit only story.txt, with commit message "Initial Commit".
+>>> git add story.txt
+git commit -m "Initial Commit"
+
+8. What is the status of story.txt and what is the status of authors.txt at this point?
+??? story.txt: untracked
+??? authors.txt: untracked
+
+9. Add a bit to your story in a text editor and save it. What is the status of story.txt now?
+modified:   story.txt
+
+10. Stage story.txt for the next commit.
+git add story.txt
+
+11. Stage authors.txt for the next commit.
+ git add authors.txt
+
+12. One second thought, unstage authors.txt. We don't want to commit it yet.
+git reset HEAD authors.txt
+
+13. Hmm. On third thought, yeah, let's stage it after all.
+git add authors.txt
+
+14. Now commit both staged files. (message = "extended story and added authors")
+git commit -m "extended story and added authors"
+
+15. Set up a GitHub repository and push this latest commit to that repo.
+echo "# GitLabJJ" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/RedEis91/GitLabJJ.git
+git push -u origin master
+
+16. One of you make a change to one of the files while the other is not looking. Don't
+stage or commit.
+
+17. The other of you use Git's command line tools to figure out what file is changed and
+what is changed about it. (You must use at least two different commands in your
+investigation.)
+git status
+git diff
+
+18. Now undo the change that was made.
+git checkout 
+
+19. Add a bogus author. Save and stage.
+git add authors.txt
+
+20. Can you use git tools to see that change?
+git diff --staged
+
+21. Nevermind that. Now completely undo that change so that you're back to the real
+authors from the last commit.
+git reset authors.txt
+git reset --hard b2eae72a6f66b56964d280bd8e0811d8c3efbc0b
+
+22. Add another couple sentences to your story and commit.
+git add story.txt
+git commit -m "Added updated story of our glory"
+
+
+23. Delete authors.txt and commit that.
+git commit -m "you better take my commit jerk"
+
+24. List all the commits.
+commit ee063a28c4c11a6fbba422ba8c5dacddeed641ed
+Author: RedEis91 <imitationkrabs91@gmail.com>
+Date:   Fri Feb 3 17:52:23 2017 -0500
+
+    you better take my commit jerk
+
+commit 86202eb625e9d9184689786bccbc92b8a2575ab9
+Author: RedEis91 <imitationkrabs91@gmail.com>
+Date:   Fri Feb 3 17:48:31 2017 -0500
+
+    Added updated story of our glory
+
+commit b2eae72a6f66b56964d280bd8e0811d8c3efbc0b
+Author: RedEis91 <imitationkrabs91@gmail.com>
+Date:   Fri Feb 3 16:47:53 2017 -0500
+
+    first commit
+
+commit 5ba8a7e9cdaee20a221c4b3db44fa5342ede3bba
+Author: RedEis91 <imitationkrabs91@gmail.com>
+Date:   Fri Feb 3 16:47:15 2017 -0500
+
+    extended story and added authors
+
+commit ce37defd9a332b2b023e7fe0a56e8be0f2e58f1e
+Author: RedEis91 <imitationkrabs91@gmail.com>
+Date:   Fri Feb 3 16:45:01 2017 -0500
+
+    Initial Commit
+Macks-MacBook-Air:Git-Lab Red$ 
+
+
+25. You're reminiscing about the good 'ol days of seeing your names in text. Switch back
+to the commit where authors.txt existed so you can gaze upon it one more time.
+git reset --hard 86202eb625e9d9184689786bccbc92b8a2575ab9
+
+26. But the past is the past. Return to the HEAD commit.
+git reset --hard ee063a28c4c11a6fbba422ba8c5dacddeed641ed
+
+27. Add this file (Git Lab.txt) to your folder and commit it.
+
+28. Push your latest changes to the GitHub.
+
+*** Bonus below...
+29. Make and commit another change to your story.
+>>> 
+
+30. You're experiencing remorse for removing attribution. You can't live with yourself.
+Bring back authors.txt from the past in a new commit on top of your new story changes.
+Explain how you pulled this off, including any commands.
+??? 
+
+31. Commit you latest changes to this file (Git Lab.txt) and push to GitHub.
+
+
+
+rm -R /Users/User/Desktop/Webb/GrandCircus/GitHubLab
